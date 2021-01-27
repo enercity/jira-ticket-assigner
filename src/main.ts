@@ -29,7 +29,7 @@ async function run(): Promise<void> {
 
     if (ticketMatches.length) {
       const ticketId = ticketMatches.reverse()[0]; // get last matching jira ticket
-      const body: string = `Jira Ticket: [${jira}/jira/browse/${ticketId}](${jira}/jira/browse/${ticketId})`;
+      const body: string = `Jira Ticket: [${jira}/browse/${ticketId}](${jira}/browse/${ticketId})`;
 
       const comments = await octokit.issues.listComments({
         issue_number,
